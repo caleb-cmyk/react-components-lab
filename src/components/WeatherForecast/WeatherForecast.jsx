@@ -1,9 +1,18 @@
-import React from "react";
-import "./weatherForecasts.css";
+import "./WeatherForecast.css";
 
-<div className="weather">
-  <h2>Day of the Week</h2>
-  <img src="" alt="" />
-  <p><span>conditions: </span>current weather conditions</p>
-  <p><span>time: </span>time of day</p>
-</div>
+const WeatherForecasts = (props) => {
+  return (
+    <div className="weather">
+      <h2>{props.weather.day}</h2>
+      <img src={props.weather.img} alt="" />
+      <p>
+        <span>conditions: {props.weather.conditions}</span>
+      </p>
+      <p>
+        <span>time: {props.weather.time} </span>
+      </p>
+    </div>
+  );
+};
+
+export default WeatherForecasts
